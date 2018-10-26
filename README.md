@@ -2,7 +2,7 @@
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 6.2.2.
 
-##Executar
+## Executar
 
 Para executar esta aplicação é necessário seguir os seguintes passos.
 
