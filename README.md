@@ -9,7 +9,7 @@ Para executar esta aplicação é necessário seguir os seguintes passos.
 Instalar o Json Server
 npm install -g json-server
 
-- Execute o seguinte comando em um interpretador de linhas de comando qualquer, no diretório onde o a arquivo "bando-de-dados.json" está presente (diretório raiz da aplicação) `json-server --watch banco-de-dados.json`
+- Execute o seguinte comando em um interpretador de linhas de comando qualquer, no diretório onde o a arquivo "banco-de-dados.json" está presente (diretório raiz da aplicação) `json-server --watch banco-de-dados.json`
 O json-server ocupará o porta 3000.
 Observação: Este arquivo é responsável por salvar os dados gerencioados pelo Json-Server.
 
