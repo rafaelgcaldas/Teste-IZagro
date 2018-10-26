@@ -13,9 +13,10 @@ npm install -g json-server
 O json-server ocupará o porta 3000.
 Observação: Este arquivo é responsável por salvar os dados gerencioados pelo Json-Server.
 
-- Execute a API Node.js, que ocupará a porta 3001.
+- Antes de executar a API Node.js, execute o comando "npm install", para instalar as dependências. a api de e-mail ocupará a porta 3001.
 Observação: Para enviar e-mail é necessáio inserir o e-mail e senha, com o qual deseja enviar os e-emails nos respectivos atributos -> (auth.user e auth.pass) no arquivos api\email\email.js
 
+- Execute o comando "npm install", para instalar as dependências.
 - Execute `ng serve` e navegue para `http://localhost:4200/`.
 
 Neste teste foi desenvolvido as seguintes solitações :
@@ -29,6 +30,7 @@ surge um pequeno banner "Cadastre-se aqui", ao clicar sobre o mesmo surge um for
 
 Foi desenvolvido um carrossel utilizando como base o componente Carousel do bootstrap, assim como um painel administrativo possibilitando o gerenciamento do mesmo. Assim que a aplicação é carregada o carrossel ficará visível na pagina home com as imagens, descrição e um botão de redirecionamento para a oferta em questão. Todos esses dados são gerenciados pleo painel administrativo. Para acessar o painel, basta acessar a opção de menu "Administrativo" contida no cabeçalho da aplicação. Assim que acessada essa opção, é carregada um componete nav do bootstrap. Na tab "Banners", será listado os banners salvos, podendo excluir, atualizar e adicionar novos banners, sendo possível também marcar qual será o banner que será o primeiro a ser exibido assim que a home é carregada.
 Na tab "Usuarios" serão listados todos os usuarios cadastrados pelo banner flutuante.
+Observação:  De ínicio a aplicação possui dois banners cadastrados, mas é possivel adicionar a quantidade que preferir.
 
 ## Opção de menu Sementes
 
