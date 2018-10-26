@@ -16,7 +16,7 @@ Observação: Este arquivo é responsável por salvar os dados gerencioados pelo
 - Antes de executar a API Node.js, execute o comando "npm install", para instalar as dependências. a api de e-mail ocupará a porta 3001.
 Observação: Para enviar e-mail é necessáio inserir o e-mail e senha, com o qual deseja enviar os e-emails nos respectivos atributos -> (auth.user e auth.pass) no arquivos api\email\email.js
 
-- Execute o comando "npm install", para instalar as dependências.
+- Execute o comando "npm install" no template em angular para instalar as dependências.
 - Execute `ng serve` e navegue para `http://localhost:4200/`.
 
 Neste teste foi desenvolvido as seguintes solitações :
