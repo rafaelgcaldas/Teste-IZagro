@@ -2,9 +2,11 @@
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 6.2.2.
 
-#Para executar esta aplicação é necessário seguir os seguintes passos.
+##Executar
 
-##Instalar o Json Server
+Para executar esta aplicação é necessário seguir os seguintes passos.
+
+Instalar o Json Server
 npm install -g json-server
 
 - Execute o seguinte comando em um interpretador de linhas de comando qualquer, no diretório onde o a arquivo "bando-de-dados.json" está presente (diretório raiz da aplicação) `json-server --watch banco-de-dados.json`
@@ -16,7 +18,7 @@ Observação: Para enviar e-mail é necessáio inserir o e-mail e senha, com o q
 
 - Execute `ng serve` e navegue para `http://localhost:4200/`.
 
-#Neste teste foi desenvolvido as seguintes solitações :
+Neste teste foi desenvolvido as seguintes solitações :
 
 ## Banner Flutuante
 
@@ -39,5 +41,5 @@ Também para iluastrar o contexto da aplicação, a página home possui o Carros
 No back-end foi utilizado o Json Server `https://www.npmjs.com/package/json-server`, cuja a função é simular uma API REST e manter os dados gerados pela applicação no arquivo banco-de-dados.json, simulando um banco de dados não relacional.
 Também foi desenvolvida uma API para o envio de e-mails utilizando o Node.js e o módulo Nodemailer.
 
-#Observação
+OBSERVAÇÃO
 Todo o conteúdo, como imagens e informações foram retirados do site `www.izagro.com.br`, de forma a ilustrar a aplicação, possuíndo semântica meramente ilustrativa.
