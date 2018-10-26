@@ -1,0 +1,49 @@
+<div class="container" style="margin-top: 150px">
+    <div class="oferta" *ngIf="oferta !== undefined">
+  
+      <div class="row">
+        <div class="col text-center">
+          <h4>{{oferta.pontos_fortes }}</h4>
+        </div>
+      </div>
+  
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4">
+          <div >
+            <img class="img-fluid" [src]="oferta.imagens.url" />
+          </div>
+        </div>
+  
+        <div class="col-md-8">
+          <div class="row">
+              <div class="col">
+                <h4>{{ oferta.titulo }}</h4>
+              </div>
+          </div>
+  
+          <div class="row">
+              <div class="col">
+                <p><b>Anunciado por:</b> {{ oferta.anunciante }}</p>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p><b>Descrição:</b> {{ oferta.descricao_oferta }}</p>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col">
+                <p><b>Reação à doenças:</b> {{ oferta.reacao_doencas }}</p>
+              </div>
+            </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+    <br /><br />
+    
+  </div>

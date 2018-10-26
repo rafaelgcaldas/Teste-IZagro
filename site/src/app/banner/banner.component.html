@@ -1,0 +1,26 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top: 130px;">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators"
+      data-slide-to="i" 
+      [class]="banner.status ? 'active' : ''" 
+      *ngFor="let banner of banners; let i = index">
+    </li>
+  </ol>
+  <div class="carousel-inner">
+    <div [class]=" banner.status ? 'carousel-item active' : 'carousel-item'" *ngFor="let banner of banners">
+      <img class="d-block w-100 img-fluid" [src]="banner.imagem" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>{{ banner.descricao }}</h1>
+        <button class="btn btn-success" [routerLink]="['oferta', banner.id_oferta]" >{{ banner.titulo }}</button>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

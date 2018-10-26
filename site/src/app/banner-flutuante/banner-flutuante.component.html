@@ -1,0 +1,84 @@
+<ngx-toasta [position]="'top-right'"></ngx-toasta>
+<div id="banner" [@animacao-banner]="estadoBanner">
+  <div [style.display]="!estadoForm ? 'block' : 'none'">
+    <div id="fechar" (click)="hide()"><a title="Fechar" class="fechar">X</a></div>
+    <img class="img-fluid img-banner" src="/assets/cadastrese.png" alt="" (click)="showForm()">
+  </div>
+  <div class="form container" [style.display]="estadoForm ? 'block' : 'none'">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" novalidate>
+
+      <div class="form-row">
+  
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" formControlName="nome" placeholder="Nome Completo">
+          <small *ngIf="msgSuccess('nome')" class="form-text text-success">Ok</small>
+          <small *ngIf="msgError('nome')" class="form-text text-danger">Nome inválido</small>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" formControlName="email" placeholder="nome@email.com" >
+          <small *ngIf="msgSuccess('email')" class="form-text text-success">Ok</small>
+          <small *ngIf="msgError('email')" class="form-text text-danger">E-mail inválido</small>
+        </div>
+  
+      </div>
+  
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <input type="text" #cep (blur)="consultaCep(cep.value)" class="form-control" formControlName="cep" placeholder="Cep">
+            <small *ngIf="msgSuccess('cep')" class="form-text text-success">Ok</small>
+            <small *ngIf="msgError('cep')" class="form-text text-danger">Preencha o campo Cep</small>
+          </div>
+  
+          <div class="form-group col-md-3">
+            <input type="text" class="form-control" placeholder="Número"  placeholder="Número" formControlName="numero">
+            <small *ngIf="msgSuccess('numero')" class="form-text text-success">Ok</small>
+            <small *ngIf="msgError('numero')" class="form-text text-danger">Preencha o campo Número</small>
+          </div>
+  
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control empty" formControlName="complemento" placeholder="Complemento">
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Rua" formControlName="rua">
+            <small *ngIf="msgSuccess('rua')" class="form-text text-success">Ok</small>
+            <small *ngIf="msgError('rua')" class="form-text text-danger">Rua inválida</small>
+          </div>
+          <div class="form-group col-md-6">
+              <input type="text" class="form-control" placeholder="Bairro" formControlName="bairro">
+              <small *ngIf="msgSuccess('bairro')" class="form-text text-success">Ok</small>
+              <small *ngIf="msgError('bairro')" class="form-text text-danger">Preencha o campo Bairro</small>
+            </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="form-group col-md-8">
+            <input type="text" class="form-control" placeholder="Cidade" formControlName="cidade">
+            <small *ngIf="msgSuccess('cidade')" class="form-text text-success">Ok</small>
+            <small *ngIf="msgError('cidade')" class="form-text text-danger">Preencha o campo Cidade</small>
+          </div>
+  
+          <div class="form-group col-md-4">
+            <select class="form-control" formControlName="estado">
+              <option *ngFor="let estado of estados | async" [value]="estado.sigla">{{estado.nome}}</option>
+            </select>
+            <small *ngIf="msgSuccess('estado')" class="form-text text-success">Ok</small>
+            <small *ngIf="msgError('estado')" class="form-text text-danger">Preencha o campo Estado</small>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn btn-primary" (click)="hide()"  style="margin-right: 5px;">Fechar</button>
+              <button type="submit" class="btn btn-primary" >Salvar</button>
+            </div>
+          </div>
+        </div>
+    
+      </form>
+  </div>
+</div>

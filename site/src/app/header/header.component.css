@@ -1,0 +1,51 @@
+.menu {
+    background: #ff8814
+}
+
+.cart {
+    width: 30px;
+}
+
+.form-inline {
+    position: relative;
+}
+
+.form-inline input {
+    width: 100%
+}
+
+.form-inline img {
+    position: absolute;
+    bottom: 8px;
+    margin-left: 10px;
+}
+
+.navbar-brand img {
+    width: 135px;
+}
+
+.navbar {
+    background-color: #FFF
+}
+
+.nav-link {
+    color: #C1E4FF
+}
+
+.nav-link:hover{
+    color: #FFF
+}
+
+.active {
+    color: #FFF 
+}
+
+@media (max-width: 576px) { 
+    
+    .cart {
+        width: 40px;
+        position: absolute !important;
+        bottom: 60px !important;
+        right: 6px;
+    }
+}

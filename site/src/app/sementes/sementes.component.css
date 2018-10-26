@@ -1,0 +1,19 @@
+img {
+    border-radius: 5px;
+    width: 320px;
+    height: 200px
+}
+
+.container {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.secao {
+    margin: 25px
+}
+
+button {
+    bottom: 10px;
+    position: absolute;
+}

@@ -1,0 +1,44 @@
+<div class="table-responsive" style="margin-top: 35px;">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Id Oferta</th>
+        <th scope="col">Nome Oferta</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Ver Primeiro</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody *ngIf="this.flag === false; else trMsg">
+      <tr *ngFor="let banner of banners">
+        <th>{{ banner.id}}</th>
+        <th>{{ banner.id_oferta }}</th>
+        <td>{{ banner.titulo }}</td>
+        <td>{{ banner.descricao }}</td>
+        <td>{{ banner.status ? "Ativo" : "Inativo" }}</td>
+        <div class="d-flex justify-content-end">
+            <fa name="pencil" [routerLink]='["incluirBanner", banner.id]' style="margin:5px; color: blue;"></fa>
+            <fa name="close" (click)="delete(banner, banner.id)"  style="margin:5px; color: red;"></fa>
+          </div>
+      </tr>
+    </tbody>
+    <ng-template #trMsg>
+      <tbody>
+        <tr>
+          <td colspan="6" style="text-align: center;">Nenhum usuário encontrado...</td>
+        </tr>
+      </tbody>
+    </ng-template>
+  </table>
+</div>
+<div class="row">
+    <div class="col">
+      <div class="d-flex justify-content-end">
+        <button type="button" 
+          class="btn btn-primary" 
+          routerLink="incluirBanner"
+        >Adicionar</button>
+      </div>
+    </div>
+  </div>

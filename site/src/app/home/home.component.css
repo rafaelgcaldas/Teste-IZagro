@@ -1,0 +1,12 @@
+.card {
+    margin-bottom: 25px;
+    /* min-height: 385px; */
+}
+
+.card-block {
+    padding: 12px 15px;
+}
+
+.card-img-top {
+    height: 235px;
+}

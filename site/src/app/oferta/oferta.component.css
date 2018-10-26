@@ -1,0 +1,13 @@
+h1 {
+    color: #555
+}
+
+.oferta {
+    margin-top: 25px
+}
+
+img {
+    border-radius: 5px;
+    width: 320px;
+    height: 200px
+}

@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col-md-2">Nome</th>
+            <th scope="col-md-2">E-mail</th>
+            <th scope="col-md-2">Rua</th>
+            <th scope="col-md-1">Cep</th>
+            <th scope="col-md-1">Número</th>
+            <th scope="col-md-1">Complemento</th>
+            <th scope="col-md-1">Bairro</th>
+            <th scope="col-md-1">Cidade</th>
+            <th scope="col-md-1">Estado</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="this.flag === false; else trMsg">
+          <tr *ngFor="let usuario of usuarios">
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>{{ usuario.rua }}</td>
+            <td>{{ usuario.cep }}</td>
+            <td>{{ usuario.numero }}</td>
+            <td>{{ usuario.complemento }}</td>
+            <td>{{ usuario.bairro }}</td>
+            <td>{{ usuario.cidade }}</td>
+            <td>{{ usuario.estado }}</td>
+          </tr>
+        </tbody>
+        <ng-template #trMsg>
+          <tbody>
+            <tr>
+                <td colspan="10" style="text-align: center;">Nenhum usuário encontrado...</td>
+              </tr>
+            </tbody>
+          </ng-template>
+      </table>
+    </div>
+  
+  </div>
+  
